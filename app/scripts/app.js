@@ -12,21 +12,33 @@ angular
   .module('sitePersoAng15App', [
     'ngAnimate',
     'ngResource',
-    'ngRoute'
+    'ngRoute',
+    'ui.router',
+    'pdf'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
+  .config(function ($routeProvider,$stateProvider) {
+
+    $stateProvider
+      .state('home', {
+        url: '/',
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+      .state('pro', {
+        url: '/construct',
+        templateUrl: 'views/construct.html',
+        controller: 'CvCtrl',
+        controllerAs: 'cv'
       })
-      .otherwise({
-        redirectTo: '/'
+      .state('cv', {
+        url: '/cv',
+        templateUrl: 'views/cv.html',
+        controller: 'CvCtrl',
+        controllerAs: 'cv'
+      })
+      .state('lien',{
+        url: '/lien',
+        templateUrl: 'views/lien.html'
       });
   });

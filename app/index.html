@@ -33,15 +33,16 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#/">sitePersoAng15</a>
+            <a class="navbar-brand active" ui-sref="home">Quentin CHAPELLE</a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
+
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
+              <li><a ui-sref="cv">Curriculum vitae</a></li>
+              <li><a ui-sref="pro">Expériences professionnelles</a></li>
+              <li><a ui-sref="lien">Liens</a></li>
             </ul>
           </div>
         </div>
@@ -49,13 +50,11 @@
     </div>
 
     <div class="container">
-    <div ng-view=""></div>
+    <div ui-view></div>
     </div>
 
     <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
+
     </div>
 
 
@@ -78,6 +77,10 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/pdfjs-dist/build/pdf.js"></script>
+    <script src="bower_components/pdfjs-dist/build/pdf.worker.js"></script>
+    <script src="bower_components/angular-pdf-viewer/dist/angular-pdf-viewer.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -85,6 +88,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/cv.js"></script>
         <!-- endbuild -->
 </body>
 </html>
