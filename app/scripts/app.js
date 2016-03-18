@@ -16,8 +16,9 @@ angular
     'ui.router',
     'pdf'
   ])
-  .config(function ($routeProvider,$stateProvider) {
+  .config(function ($urlRouterProvider,$stateProvider) {
 
+    $urlRouterProvider.otherwise('/');
     $stateProvider
       .state('home', {
         url: '/',
